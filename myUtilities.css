@@ -1,0 +1,40 @@
+.flex-display {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+.text-center {
+    text-align: center;
+}
+
+.invert{
+    filter: invert(1);
+}
+.bg-gray{
+    background: #3a383852;
+}
+.rounded{
+    border-radius: 10px;
+}
+.m-1{
+    margin: 8px;
+}
+.p-1{
+    padding: 10px;
+}
+.cursor{
+    cursor: pointer;
+}
+.my-ul{
+    background: #1f1e1ecc;
+    padding: 2px 0 8px 10px;
+}
+.hidden{
+    display: none;
+}

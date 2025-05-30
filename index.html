@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="myUtilities.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side-container">
+            <div class="home bg-gray rounded m-1 p-1">
+                <div class="logo"><img src="logo-pngs/logo.png" alt="Logo"><span>boom-BOX</span></div>
+                <img class="side-close-btn" src="imgs/close.svg" alt="">
+
+                <ul class="my-ul rounded m-1">
+                    <li class="flex-display cursor"><img class="invert" src="imgs/home.svg" alt="Home">Home</li>
+                    <li class="search flex-display cursor"><img class="invert" src="imgs/search.svg" alt="Search">
+                        <span><input class="search-bar" type="text" placeholder="Search"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="library bg-gray rounded m-1 p-1">
+                <div class="your-library">
+                    <ul class="my-ul rounded">
+                        <li class="flex-display align-center ">
+                            <img class="invert" src="imgs/library.svg" alt="Library"><span>Your-Library</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="songs-list">
+                    <ul class="songs-lis-ul">
+                    </ul>
+                </div>
+                <div class="footer flex-display">
+                    <div><a href="legal"><span>Legal</span></a></div>
+                    <div><a href="privacy-center"><span>Privacy Center</span></a></div>
+                    <div><a href="policy"><span>Policy</span></a></div>
+                    <div><a href="about-ads"><span>About ads</span></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side-container bg-gray rounded">
+            <div class="header flex-display">
+                <nav class="nav-bar cursor">
+                    <img src="imgs/bar.svg" class="side-menu-bar" alt="">
+                    <div class="toggle invert">
+                        <img src="imgs/sun.svg" id="icon">
+                    </div>
+                </nav>
+
+                <div class="l-s-buttons">
+                    <!-- Login -->
+                    <div id="loginModal" class="modal hidden">
+                        <div class="modal-content rounded bg-gray">
+                            <span class="close-btn">&times;</span>
+                            <h2>Login</h2>
+                            <form id="loginForm">
+                                <input type="text" placeholder="Username or Email address" required id="user-name"
+                                    class="input-field">
+                                <input type="password" placeholder="Password" required id="user-password"
+                                    class="input-field">
+                                <button type="submit" class="continue" id="continue-login">Continue</button>
+                            </form>
+                            <div>
+                                <p>Don't have a boom-BOX account yet? <span id="account-singup" class="cursor">Click
+                                        here</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+
+                    <!-- Sign Up -->
+                    <div id="signupModal" class="modal hidden">
+                        <div class="modal-content rounded bg-gray">
+                            <span class="close-btn close"> &times;</span>
+                            <h2>Sign Up</h2>
+                            <form id="signupForm">
+                                <input type="text" placeholder="Name" required id="user-input-name" class="input-field">
+                                <input type="text" placeholder="Username" required id="input-username"
+                                    class="input-field">
+                                <input type="email" placeholder="Email" required id="user-email" class="input-field">
+                                <input type="password" placeholder="Password" required id="user-first-password"
+                                    class="input-field">
+                                <input type="password" placeholder="Confirm Password" required
+                                    id="user-confirm-password" class="input-field">
+                                <button type="submit" class="continue" id="continue-signup">Continue</button>
+                            </form>
+                            <div>
+                                <p>Already have an account? <span id="account-login" class="cursor">Click here</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                    <img src="imgs/user-logo.svg" id="user-icon" class="user-img cursor hidden">
+                </div>
+            </div>
+            <div class="sing-container flex-display hidden">
+
+            </div>
+            <div class="myPlaylist">
+                <h1>My Playlists</h1>
+                <div class="cardContainer cursor">
+                </div>
+
+                <div class="play-bar">
+                    <div class="songs-play-btns">
+                        <img id="previous-btn" class="invert cursor" src="imgs/previous.svg">
+                        <img id="play" class="invert cursor" src="imgs/playbtn.svg">
+                        <img id="next-btn" class="invert cursor" src="imgs/nextbtn.svg">
+                        <div class="seek-bar cursor">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="play-bar-info ">
+                            <div class="song-time">
+                                00:00/00:00
+                            </div>
+                        </div>
+                        <div class="song-name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="playmusic.js"></script>
+</body>
+
+</html>
